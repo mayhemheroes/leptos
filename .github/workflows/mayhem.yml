@@ -55,6 +55,7 @@ jobs:
       matrix:
         mayhemfile:
         - fuzz/mayhemfiles/Mayhemfile_config
+        - fuzz/mayhemfiles/Mayhemfile_event_listener
     steps:
     - uses: actions/checkout@v3
     - name: Start analysis for ${{ matrix.mayhemfile }}

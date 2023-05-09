@@ -10,9 +10,13 @@ cargo-fuzz = true
 
 [dependencies]
 libfuzzer-sys = "0.4"
+arbitrary = { version = "1", features = ["derive"] }
 
 [dependencies.leptos_config]
 path = "../leptos_config"
+
+[dependencies.leptos_router]
+path = "../router"
 
 # Prevent this from interfering with workspaces
 [workspace]
@@ -21,5 +25,11 @@ members = ["."]
 [[bin]]
 name = "config"
 path = "fuzz_targets/config.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "event_listener"
+path = "fuzz_targets/event_listener.rs"
 test = false
 doc = false
