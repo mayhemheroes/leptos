@@ -1,0 +1,6 @@
+project: leptos
+target: event_listener
+duration: 300
+
+cmds:
+  - cmd: /event_listener

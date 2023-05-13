@@ -1,0 +1,7 @@
+project: leptos
+target: config
+duration: 90
+
+cmds:
+    - cmd: /config
+
